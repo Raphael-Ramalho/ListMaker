@@ -2,6 +2,23 @@ body{
     font-size: 62.5%;
 }
 
+h1{
+    font-size: 2rem;
+    margin: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px rgb(155, 155, 155);
+}
+
+button, input{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+button:hover{
+    
+}
+
 .page{
     background-image: linear-gradient( to bottom right, rgb(255,205,136), rgb(83, 0, 161));
     display: flex;
@@ -24,5 +41,24 @@ body{
     height: calc(100% - 0.4rem);
     border-radius: 0.5rem;
     border: dashed white 0.2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page__card__content__input-area{
+    display: flex;
+}
+
+.page__card__content__input-area__text-input{
+    border-radius: 5px 0px 0px 5px; 
+}
+
+.page__card__content__input-area__submit-button{
+    background-image: linear-gradient(rgb(159, 46, 163), rgb(83, 0, 161));
+    text-shadow: 1px 1px rgb(8, 0, 0);
+    color: white;  
+    border-radius: 0px 5px 5px 0px; 
+    border-left: none;
 }
 
