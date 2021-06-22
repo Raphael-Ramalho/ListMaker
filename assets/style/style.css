@@ -16,7 +16,13 @@ button, input{
 }
 
 button:hover{
-    
+    filter: brightness(1.1);
+}
+
+button:active{
+    filter: brightness(0.9);
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.404);
+    font-size: 1.25em;
 }
 
 .page{
@@ -60,5 +66,7 @@ button:hover{
     color: white;  
     border-radius: 0px 5px 5px 0px; 
     border-left: none;
+    cursor: pointer;
+    width: 6rem;
 }
 
