@@ -13,6 +13,7 @@ button, input{
     border: 1px solid black;
     border-radius: 5px;
     padding: 10px;
+    border-color: transparent;
 }
 
 button:hover{
@@ -52,15 +53,19 @@ button:active{
     flex-direction: column;
 }
 
-.page__card__content__input-area{
+.page__card__content__input{
     display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
-.page__card__content__input-area__text-input{
+.page__card__content__input__text-input{
     border-radius: 5px 0px 0px 5px; 
+    width: 50%;
+    background-color: rgb(224, 224, 224);
 }
 
-.page__card__content__input-area__submit-button{
+.page__card__content__input__submit-button{
     background-image: linear-gradient(rgb(159, 46, 163), rgb(83, 0, 161));
     text-shadow: 1px 1px rgb(8, 0, 0);
     color: white;  
@@ -68,5 +73,12 @@ button:active{
     border-left: none;
     cursor: pointer;
     width: 6rem;
+}
+
+.page__card__content__items{
+    background-color: red;
+    margin-top: 20px;
+    height: 50%;
+    width: 50%;
 }
 
