@@ -14,20 +14,38 @@
 <body>
   <div class="page">
     <main class="card">
-      <div class="content">
+      <div class="dashed-area">
         <h1>List Maker</h1>
-        <div class="input-area">
-          <label for="input-item" id="item-input-label"></label>
-          <input type="text" id="input-item" class="text-input">
-          <button class="submit-button">Submit item</button>
-        </div>
-        <ul class="list">
-          <li>
-            Fazer Compras
-            <button class="done">Done</button>
-            <button class="delete">Delete</button>
-          </li>
-        </ul>
+        <section class="content">
+          <div class="input-area">
+            <label for="input-item" class="sr-only"></label>
+            <input type="text" id="input-item" class="text-input">
+            <button class="submit-button">New item</button>
+          </div>
+          <ul class="list">
+            <li class="item">
+              <p>Fazer Compras</p>
+              <div class="buttons">
+                <button class="done">Done</button>
+                <button class="delete">Delete</button>
+              </div>
+            </li>
+            <li class="item">
+              <p>asdfasdfsadf</p>
+              <div class="buttons">
+                <button class="done">Done</button>
+                <button class="delete">Delete</button>
+              </div>
+            </li>
+            <li class="item">
+              <p>ddddd</p>
+              <div class="buttons">
+                <button class="done">Done</button>
+                <button class="delete">Delete</button>
+              </div>
+            </li>
+          </ul>
+        </section>
       </div>
     </main>
   </div>
