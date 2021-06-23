@@ -6,10 +6,12 @@ h1{
 }
 
 button, input{
-    border: 1px solid black;
     border-radius: 5px;
-    padding: 10px;
     border-color: transparent;
+}
+
+button{
+    color: white;
 }
 
 button:hover{
@@ -19,7 +21,7 @@ button:hover{
 button:active{
     filter: brightness(0.9);
     box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.404);
-    font-size: 1.25em;
+    font-size: 0.8em;
 }
 
 .page{
@@ -49,20 +51,20 @@ button:active{
     flex-direction: column;
 }
 
-.page .card .content .input{
+.page .card .content .input-area{
     display: flex;
     width: 100%;
     justify-content: center;
 }
 
-.page .card .content .input .text-input{
+.page .card .content .input-area .text-input{
     border-radius: 5px 0px 0px 5px; 
     width: 50%;
     background-color: rgb(224, 224, 224);
-    
+    padding: 10px;
 }
 
-.page .card .content .input .submit-button{
+.page .card .content .input-area .submit-button{
     background-image: linear-gradient(rgb(159, 46, 163), rgb(83, 0, 161));
     text-shadow: 1px 1px rgb(8, 0, 0);
     color: white;  
@@ -70,15 +72,24 @@ button:active{
     border-left: none;
     cursor: pointer;
     width: 6rem;
+    padding: 10px;
 }
 
 .page .card .content .list{
-    background-color: rgb(250, 199, 128);
+
     margin-top: 20px;
     height: 50%;
     width: 60%;
     position:relative;
-    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
 }
 
+.page .card .content .list .done{
+    background-color: green;
+    padding: 5px;
+}
 
+.page .card .content .list .delete{
+    background-color: red;
+    padding: 5px;
+}
