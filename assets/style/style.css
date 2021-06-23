@@ -61,7 +61,7 @@ button:active{
 
 .page .card .dashed-area .content{
     width: calc(100% - 40px);
-    min-height: 200px;
+    min-height: 150px;
 }
 
 .page .card .dashed-area .content .input-area{
