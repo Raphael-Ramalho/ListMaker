@@ -1,8 +1,9 @@
 const submitButton = document.querySelector("[data-submit-button]")
 const textInput = document.querySelector("[data-text-input]")
 const itemsList = document.querySelector("[data-list]")
-const doneButton = document.querySelector("[data-done-button]")
-const deleteButton = document.querySelector("[data-delete-button]")
+const doneButton = document.querySelectorAll("[data-done-button]")
+const deleteButton = document.querySelectorAll("[data-delete-button]")
+const item = document.querySelectorAll("[data-item]")
 
 
 
@@ -15,7 +16,7 @@ const createElement = (event) => {
 
     const itemContent = textInput.value;
 
-    itemBlock.innerHTML = `<p>${itemContent}</p>
+    itemBlock.innerHTML = `<p data-item>${itemContent}</p>
     <div class="buttons">
     <button class="done" data-done-button>Done</button>
     <button class="delete">Delete</button>
@@ -27,6 +28,11 @@ const createElement = (event) => {
 
 }
 
+const completed = () =>{
+    item.classList.toggle("completed")
+}
+
 submitButton.addEventListener("click", createElement)
+doneButton.addEventListener("click", completed)
 
 
