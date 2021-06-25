@@ -122,5 +122,6 @@ button:active{
 .page .card .dashed-area .content .list .buttons .delete{
     background-color: rgb(187, 0, 0);
     width: 50px;
+    margin-left: 5px;
 }
 

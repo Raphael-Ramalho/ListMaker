@@ -1,13 +1,9 @@
 const submitButton = document.querySelector("[data-submit-button]")
-const textInput = document.querySelector("[data-text-input]")
-
-//const doneButton = document.querySelector("[data-done-button]")
-//const deleteButton = document.querySelector("[data-delete-button]")
 
 
 
 const createElement = () => {
-
+    const textInput = document.querySelector("[data-text-input]")
     const itemsList = document.querySelector("[data-list]")
     const itemBlock = document.createElement("li")
     const buttonBlock = document.createElement("div")
@@ -19,16 +15,13 @@ const createElement = () => {
     itemBlock.innerHTML = `<p data-item-text>${itemContent}</p>` 
     itemBlock.appendChild(buttonBlock)
     itemsList.appendChild(itemBlock)
-    buttonBlock.appendChild(completed())
+    buttonBlock.appendChild(doneButton())
+    buttonBlock.appendChild(deleteButton())
 
-
-    //const botaoConclui = document.createElement("button");
+    textInput.value = ""
 }
 
-const completed = () =>{
-    //const textItem = document.querySelector("[data-item-text]")
-    // textItem.classList.toggle("completed")
-
+const doneButton = () =>{
     const doneButton = document.createElement("button")
     doneButton.classList.add("done")
     doneButton.innerText = "Done"
@@ -44,22 +37,24 @@ const toggleDone = (event) =>{
     textItem.classList.toggle("completed")
 }
 
+const deleteButton = () =>{
+    const deleteButton = document.createElement("button")
+    deleteButton.classList.add("delete")
+    deleteButton.innerText = "Delete"
+    deleteButton.addEventListener("click", deleteItem)
+    return deleteButton
+}
 
+const deleteItem = (event) => {
+    const deleteButton = event.target
+    const buttonBlock = deleteButton.parentNode
+    const itemBlock = buttonBlock.parentNode
+    itemBlock.remove()
+}
 
-// const deleteItem = () =>{
-//     const item = document.querySelectorAll("[data-item]")
-//     item[numUltimoItem].remove()
-// }
 
 
 submitButton.addEventListener("click", createElement)
 
 
-
-{/* <li>
-<p data-item-text>dsfgsdgsd</p>
-<div class="buttons">
-<button class="done" data-done-button>Done</button>
-<button class="delete" data-delete-button>Delete</button>
-</div> 
-</li> */}
+//olhar porque o textInput não cria um item quando eu aperto enter. O ceep consegue fazer isso.
