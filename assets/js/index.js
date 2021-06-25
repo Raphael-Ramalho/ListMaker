@@ -2,7 +2,8 @@ const submitButton = document.querySelector("[data-submit-button]")
 
 
 
-const createElement = () => {
+const createElement = (event) => {
+    event.preventDefault()
     const textInput = document.querySelector("[data-text-input]")
     const itemsList = document.querySelector("[data-list]")
     const itemBlock = document.createElement("li")
@@ -57,4 +58,3 @@ const deleteItem = (event) => {
 submitButton.addEventListener("click", createElement)
 
 
-//olhar porque o textInput não cria um item quando eu aperto enter. O ceep consegue fazer isso.
