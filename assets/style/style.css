@@ -1,8 +1,16 @@
+html{
+    font-size: 62.5%;
+}
+
 h1{
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 20px;
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px rgb(155, 155, 155);
+}
+
+p{
+    font-size: 1.6rem;
 }
 
 .sr-only{
@@ -18,13 +26,14 @@ h1{
 }
 
 button, input{
-    border-radius: 5px;
+    border-radius: 0.5rem;
     border-color: transparent;
 }
 
 button{
     color: white;
     cursor: pointer;
+    font-size: 1.35rem;
 }
 
 button:hover{
@@ -34,23 +43,22 @@ button:hover{
 button:active{
     filter: brightness(0.9);
     box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.404);
-    font-size: 0.8em;
+    font-size: 1.25rem;
 }
 
 .page{
     background-image: linear-gradient( to bottom right, rgb(255,205,136), rgb(83, 0, 161));
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
 }
 
 .page .card{
     background-color: rgb(180, 180, 180);
-    width: 50%;
+    width: min(60rem, 80%);
     box-shadow: 25px 30px 3rem rgb(57, 0, 65);
     border-radius: 0.8rem;
-    padding: 30px;
 }
 
 .page .card .dashed-area{
@@ -64,8 +72,8 @@ button:active{
 }
 
 .page .card .dashed-area .content{
-    width: calc(100% - 40px);
-    min-height: 150px;
+    width: calc(100% - 4rem);
+    min-height: 15rem;
 }
 
 .page .card .dashed-area .content .input-area{
@@ -75,24 +83,21 @@ button:active{
 }
 
 .page .card .dashed-area .content .input-area .text-input{
-    border-radius: 5px 0px 0px 5px; 
     flex-grow: 1;
     background-color: rgb(224, 224, 224);
-    padding: 10px;
+    padding: 1rem;
 }
 
 .page .card .dashed-area .content .input-area .submit-button{
     background-image: linear-gradient(rgb(159, 46, 163), rgb(83, 0, 161));
-    text-shadow: 1px 1px rgb(8, 0, 0);
+    text-shadow: 0.1rem 0.1rem rgb(8, 0, 0);
     color: white;  
-    border-radius: 0px 5px 5px 0px; 
     border-left: none;
-    width: 105px;
-    padding: 10px;
+    padding: 1rem;
 }
 
 .page .card .dashed-area .content .list{
-    margin-top: 20px;
+    margin-top: 2rem;
     width: 100%;
 }
 
@@ -101,27 +106,24 @@ button:active{
     align-items: center;
     justify-content: space-between;
     background-color: rgb(255,205,136);
-    padding: 5px 5px 5px 15px;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    border-radius: 0.8rem;
+    margin-bottom: 1rem;
 }
 
 .page .card .dashed-area .content .list .item:last-child {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 .page .card .dashed-area .content .list .buttons button{
-    height: 23px;
+    height: 2.3rem;
 }
 
 .page .card .dashed-area .content .list .buttons .done{
     background-color: rgb(0, 139, 0);
-    width: 45px;
+
 }
 
 .page .card .dashed-area .content .list .buttons .delete{
     background-color: rgb(187, 0, 0);
-    width: 50px;
-    margin-left: 5px;
+    margin-left: 0.5rem;
 }
-

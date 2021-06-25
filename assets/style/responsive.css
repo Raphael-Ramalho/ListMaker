@@ -1,0 +1,76 @@
+@media screen and (min-width: 0px){
+
+    .page .card{
+        padding: 2rem;
+    }
+
+    .page .card .dashed-area .content .input-area{
+        flex-direction: column;
+    }
+
+    .page .card .dashed-area .content .input-area .text-input{
+        border-radius: 0.5rem 0.5rem 0px 0px; 
+    }
+
+    .page .card .dashed-area .content .input-area .submit-button{
+        border-radius: 0px 0px 0.5rem 0.5rem; 
+        width: 100%;
+    }
+
+    .page .card .dashed-area .content .list .item {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .page .card .dashed-area .content .list .buttons{
+        margin-top: 0.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .page .card .dashed-area .content .list .buttons .done,
+    .page .card .dashed-area .content .list .buttons .delete{
+        width: auto;
+        flex-grow: 1;
+    }
+}
+
+@media screen and (min-width: 550px){
+
+    .page .card{
+        padding: 3rem;
+    }
+
+    .page .card .dashed-area .content .input-area{
+        flex-direction: row;
+    }
+
+    .page .card .dashed-area .content .input-area .text-input{
+        border-radius: 0.5rem 0px 0px 0.5rem; 
+    }
+
+    .page .card .dashed-area .content .input-area .submit-button{
+        border-radius: 0px 0.5rem 0.5rem 0px; 
+        width: 10rem;
+    }
+
+    .page .card .dashed-area .content .list .item {
+        flex-direction: row;
+        padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    }
+
+    .page .card .dashed-area .content .list .buttons{
+        margin-top: 0;
+        width: auto;
+        display: inline-block;
+    }
+
+    .page .card .dashed-area .content .list .buttons .done{
+        width: 4.5rem;
+    }
+
+    .page .card .dashed-area .content .list .buttons .delete{
+        width: 5rem;
+    }
+}

@@ -30,7 +30,6 @@ const doneButton = () =>{
     return doneButton
 }
 
-
 const toggleDone = (event) =>{
     const donebutton = event.target
     const buttonBlock = donebutton.parentNode
