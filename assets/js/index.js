@@ -1,5 +1,8 @@
-const submitButton = document.querySelector("[data-submit-button]")
+import { deleteButton } from "./deleteButton.js"
+import { doneButton } from "./doneButton.js"
 
+
+const submitButton = document.querySelector("[data-submit-button]")
 
 
 const createElement = (event) => {
@@ -11,6 +14,19 @@ const createElement = (event) => {
     buttonBlock.classList.add("buttons")
     const itemContent = textInput.value;
 
+
+    //armazenamentFunction(itemContent)
+    const armazenamento = JSON.parse(localStorage.getItem("tarefa")) || []
+    const valoresArmazenados = {
+        itemContent
+    }
+    armazenamento.push(valoresArmazenados)
+
+    localStorage.setItem("tarefa", JSON.stringify(armazenamento))
+    //
+
+    
+
     itemBlock.classList.add("item")
     itemBlock.setAttribute("data-item","")
     itemBlock.innerHTML = `<p data-item-text>${itemContent}</p>` 
@@ -20,36 +36,6 @@ const createElement = (event) => {
     buttonBlock.appendChild(deleteButton())
 
     textInput.value = ""
-}
-
-const doneButton = () =>{
-    const doneButton = document.createElement("button")
-    doneButton.classList.add("done")
-    doneButton.innerText = "Done"
-    doneButton.addEventListener("click", toggleDone)
-    return doneButton
-}
-
-const toggleDone = (event) =>{
-    const donebutton = event.target
-    const buttonBlock = donebutton.parentNode
-    const textItem = buttonBlock.parentNode.firstChild
-    textItem.classList.toggle("completed")
-}
-
-const deleteButton = () =>{
-    const deleteButton = document.createElement("button")
-    deleteButton.classList.add("delete")
-    deleteButton.innerText = "Delete"
-    deleteButton.addEventListener("click", deleteItem)
-    return deleteButton
-}
-
-const deleteItem = (event) => {
-    const deleteButton = event.target
-    const buttonBlock = deleteButton.parentNode
-    const itemBlock = buttonBlock.parentNode
-    itemBlock.remove()
 }
 
 
