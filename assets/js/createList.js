@@ -19,11 +19,11 @@ export const createList = () => {
         buttonBlock.appendChild(doneButton())
         buttonBlock.appendChild(deleteButton())
 
-        
+        if(armazenamento[i].done){
+            const textItem = itemBlock.firstChild
+            textItem.classList.add("completed")
+        }
     }
-
-    
-
     return list
 }
 

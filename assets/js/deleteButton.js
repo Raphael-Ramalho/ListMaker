@@ -11,5 +11,7 @@ const deleteItem = (event) => {
     const buttonBlock = deleteButton.parentNode
     const itemBlock = buttonBlock.parentNode
     itemBlock.remove()
+
+
 }
 

@@ -8,30 +8,24 @@ export const doneButton = () =>{
 
 const toggleDone = (event) =>{
 
-
     const donebutton = event.target
     const buttonBlock = donebutton.parentNode
     const textItem = buttonBlock.parentNode.firstChild
-    //console.log(textItem.innerText)
-    textItem.classList.toggle("completed")
 
     const armazenamento = JSON.parse(localStorage.getItem("tarefa")) || []
+
+    const armazenamentoCopia = armazenamento.slice()
 
     const textItemValue = textItem.innerText
 
     for(let i = 0; i < armazenamento.length; i++){
-        
         if(textItemValue == armazenamento[i].itemContent){
-           console.log(armazenamento[i].itemContent)
-           console.log(armazenamento[i].done)
-            if(armazenamento[i].done == false){
-                armazenamento[i].done = true
-                console.log("opa")
-            } else {
-                armazenamento[i].done = false
-            }
+            armazenamentoCopia[i].done = !armazenamentoCopia[i].done  
+            textItem.classList.toggle("completed")
         }
     }
+
+    localStorage.setItem("tarefa", JSON.stringify(armazenamentoCopia))
 }
 
 

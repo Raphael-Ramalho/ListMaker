@@ -1,7 +1,8 @@
 import { createList } from "./createList.js";
 
 
-export const createNewTask = () => {
+export const createNewTask = (event) => {
+    event.preventDefault()
     const listArea = document.querySelector("[data-list-area]")
     const textInput = document.querySelector("[data-text-input]")
     const itemContent = textInput.value;
@@ -15,8 +16,6 @@ export const createNewTask = () => {
     }
 
     const armazenamento = JSON.parse(localStorage.getItem("tarefa")) || []
-
-    console.log(armazenamento[0].itemContent)
 
     armazenamento.push(valoresArmazenados)
     localStorage.setItem("tarefa", JSON.stringify(armazenamento))
