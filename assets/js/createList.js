@@ -2,7 +2,7 @@ import { deleteButton } from "./deleteButton.js"
 import { doneButton } from "./doneButton.js"
 
 export const createList = () => {
-    const armazenamento = JSON.parse(localStorage.getItem("tarefa"))
+    const armazenamento = JSON.parse(localStorage.getItem("tarefa")) || []
     const list = document.createElement("ul")
     
     for(let i = 0; i <  armazenamento.length; i++){

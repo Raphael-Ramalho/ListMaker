@@ -1,7 +1,7 @@
 import { createList } from "./createList.js";
 
 
-export const createElement = () => {
+export const createNewTask = () => {
     const listArea = document.querySelector("[data-list-area]")
     const textInput = document.querySelector("[data-text-input]")
     const itemContent = textInput.value;
