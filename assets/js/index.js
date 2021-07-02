@@ -1,61 +1,12 @@
-import { deleteButton } from "./deleteButton.js"
-import { doneButton } from "./doneButton.js"
-
+import { createList } from "./createList.js"
+import { createElement } from "./createElement.js"
 
 const submitButton = document.querySelector("[data-submit-button]")
+const listArea = document.querySelector("[data-list-area]")
 
 
-const createElement = (event) => {
-    event.preventDefault()
-    const textInput = document.querySelector("[data-text-input]")
-    const itemsList = document.querySelector("[data-list]")
-    const itemContent = textInput.value;
-    itemsList.innerHTML = ""
-
-    //armazenamentFunction(itemContent)
-    const armazenamento = JSON.parse(localStorage.getItem("tarefa")) || []
-    const valoresArmazenados = {
-        itemContent
-    }
-    armazenamento.push(valoresArmazenados)
-    console.log(armazenamento.length)
-    localStorage.setItem("tarefa", JSON.stringify(armazenamento))
-    //
-
-    //tente colocar esse for fora do create element
-    // talvez só precise usar um return, como na primeira função do donebutton
-    for(let i = 0; i <  armazenamento.length; i++){
-        const itemBlock = document.createElement("li")
-        const buttonBlock = document.createElement("div")
-        buttonBlock.classList.add("buttons")
-        itemBlock.classList.add("item")
-        itemBlock.innerHTML = `<p>${armazenamento[i].itemContent}</p>` 
-        itemBlock.appendChild(buttonBlock)
-        itemsList.appendChild(itemBlock)
-        buttonBlock.appendChild(doneButton())
-        buttonBlock.appendChild(deleteButton())
-    }
-
-    textInput.value = ""
-}
-
+listArea.appendChild(createList())
 
 
 submitButton.addEventListener("click", createElement)
 
-
-
-// for(i = 0; i <  armazenamento.length; i++){
-//     const itemBlock = document.createElement("li")
-//     const buttonBlock = document.createElement("div")
-//     buttonBlock.classList.add("buttons")
-//     itemBlock.classList.add("item")
-//     itemBlock.setAttribute("data-item","")
-//     itemBlock.innerHTML = `<p data-item-text>${itemContent}</p>` 
-//     itemBlock.appendChild(buttonBlock)
-//     itemsList.appendChild(itemBlock)
-//     buttonBlock.appendChild(doneButton())
-//     buttonBlock.appendChild(deleteButton())
-// }
-
-// textInput.value = ""
