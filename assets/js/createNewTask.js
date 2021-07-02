@@ -10,10 +10,14 @@ export const createNewTask = () => {
 
 
     const valoresArmazenados = {
+        done: false,
         itemContent
     }
 
     const armazenamento = JSON.parse(localStorage.getItem("tarefa")) || []
+
+    console.log(armazenamento[0].itemContent)
+
     armazenamento.push(valoresArmazenados)
     localStorage.setItem("tarefa", JSON.stringify(armazenamento))
 

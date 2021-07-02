@@ -1,9 +1,12 @@
 import { deleteButton } from "./deleteButton.js"
 import { doneButton } from "./doneButton.js"
 
+
+
 export const createList = () => {
     const armazenamento = JSON.parse(localStorage.getItem("tarefa")) || []
     const list = document.createElement("ul")
+
     
     for(let i = 0; i <  armazenamento.length; i++){
         const itemBlock = document.createElement("li")
@@ -15,6 +18,13 @@ export const createList = () => {
         list.appendChild(itemBlock)
         buttonBlock.appendChild(doneButton())
         buttonBlock.appendChild(deleteButton())
+
+        
     }
+
+    
+
     return list
 }
+
+
