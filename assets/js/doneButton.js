@@ -22,6 +22,7 @@ const toggleDone = (event) =>{
         if(textItemValue == armazenamento[i].itemContent){
             armazenamentoCopia[i].done = !armazenamentoCopia[i].done  
             textItem.classList.toggle("completed")
+            break
         }
     }
 
