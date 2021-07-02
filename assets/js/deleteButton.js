@@ -10,7 +10,6 @@ const deleteItem = (event) => {
     const deleteButton = event.target
     const buttonBlock = deleteButton.parentNode
     const itemBlock = buttonBlock.parentNode
-    //itemBlock.remove()
 
     const textItem = buttonBlock.parentNode.firstChild
 
