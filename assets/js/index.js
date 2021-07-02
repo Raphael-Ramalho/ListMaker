@@ -22,7 +22,8 @@ const createElement = (event) => {
     localStorage.setItem("tarefa", JSON.stringify(armazenamento))
     //
 
-    
+    //tente colocar esse for fora do create element
+    // talvez só precise usar um return, como na primeira função do donebutton
     for(let i = 0; i <  armazenamento.length; i++){
         const itemBlock = document.createElement("li")
         const buttonBlock = document.createElement("div")
@@ -40,9 +41,7 @@ const createElement = (event) => {
 
 
 
-
 submitButton.addEventListener("click", createElement)
-
 
 
 
