@@ -9,7 +9,6 @@ export const createNewTask = (event) => {
 
     listArea.innerHTML = ""
 
-
     const valoresArmazenados = {
         done: false,
         itemContent
@@ -17,10 +16,22 @@ export const createNewTask = (event) => {
 
     const armazenamento = JSON.parse(localStorage.getItem("tarefa")) || []
 
-    armazenamento.push(valoresArmazenados)
-    localStorage.setItem("tarefa", JSON.stringify(armazenamento))
+
+    let valorUnico = true
+    for(let i = 0; i < armazenamento.length; i++){
+        if (itemContent == armazenamento[i].itemContent){
+            valorUnico = false 
+            break
+        } 
+    }
 
 
+    if(itemContent && valorUnico){
+        armazenamento.push(valoresArmazenados)
+        localStorage.setItem("tarefa", JSON.stringify(armazenamento))
+    }
+
+    
     listArea.appendChild(createList())
 
     textInput.value = ""
