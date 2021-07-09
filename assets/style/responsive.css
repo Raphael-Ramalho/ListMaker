@@ -2,6 +2,7 @@
 
     .page .card{
         padding: 2rem;
+        margin-top: 5rem;
     }
 
     .page .card .dashed-area .content .input-area{
@@ -10,6 +11,7 @@
 
     .page .card .dashed-area .content .input-area .text-input{
         border-radius: 0.5rem 0.5rem 0px 0px; 
+        text-align: center;
     }
 
     .page .card .dashed-area .content .input-area .submit-button{
@@ -40,6 +42,7 @@
 
     .page .card{
         padding: 3rem;
+        margin-top: 10rem;
     }
 
     .page .card .dashed-area .content .input-area{
@@ -48,6 +51,7 @@
 
     .page .card .dashed-area .content .input-area .text-input{
         border-radius: 0.5rem 0px 0px 0.5rem; 
+        text-align: start;
     }
 
     .page .card .dashed-area .content .input-area .submit-button{
@@ -72,5 +76,16 @@
 
     .page .card .dashed-area .content .list .buttons .delete{
         width: 5rem;
+    }
+}
+
+@media screen and (min-width: 900px){
+
+    .page{
+        align-items: center;
+    }
+
+    .page .card{
+        margin-top: -10rem;
     }
 }
