@@ -1,6 +1,6 @@
 # ListMaker 📃
 Aplicação para criar listas em localStorage, com botões para deletar e marcar itens como concluídos.
-Para acessar-lo, <a href="https://raphael-ramalho.github.io/ListMaker/">clique aqui</a>.
+Para acessar-lo, <a href="https://raphael-ramalho.github.io/listmaker/">clique aqui</a>.
 
 ## 🛠️ Construído com
 <ul>
